@@ -19,14 +19,14 @@ const register = async () => {
         Authorization: 'Bearer ' + token
     }
     const options = {
-        url: `${config.zoomUrl}/${config.webinarId}/registrants`,
+        url: `${config.zoomUrl}/webinars/${config.webinarId}/registrants`,
         headers: headers,
         method: 'POST',
         body: JSON.stringify(body)
     }
 
     const response = await request(options)
-    console.log(JSON.parse(response))
+    console.log(response)
 }
 
 try {
